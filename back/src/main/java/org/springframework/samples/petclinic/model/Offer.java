@@ -12,16 +12,10 @@ import javax.validation.constraints.Digits;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.samples.petclinic.rest.JacksonCustomOwnerDeserializer;
-import org.springframework.samples.petclinic.rest.JacksonCustomOwnerSerializer;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Entity
 @Table(name = "offers")
-@JsonSerialize(using = JacksonCustomOwnerSerializer.class)
-@JsonDeserialize(using = JacksonCustomOwnerDeserializer.class)
 public class Offer extends BaseEntity{
 	
 	@Column(name = "title")
