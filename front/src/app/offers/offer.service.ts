@@ -13,6 +13,6 @@ export class OfferService {
   constructor(private httpClient: HttpClient) { }
 
   getOffers(): Observable<Offer[]> {
-    return this.httpClient.get<Offer[]>('http://10.125.125.42:9966/petclinic/api/owners');
+    return this.httpClient.get<Offer[]>('http://localhost:3000/Offers');
   }
 }
